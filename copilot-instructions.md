@@ -26,6 +26,28 @@ Este proyecto utiliza tecnologías de vanguardia enfocadas en el rendimiento, la
 
 ---
 
+## 🧪 Stack de Testing
+
+Este proyecto implementa testing moderno, rápido y optimizado para el stack de Vite + React + TypeScript.
+
+| Tecnología                | Rol                                                                                         |
+| :------------------------ | :------------------------------------------------------------------------------------------ |
+| **Test Runner**           | **Vitest** - Motor de ejecución de tests optimizado para Vite con HMR y soporte nativo ESM. |
+| **Component Testing**     | **React Testing Library** - Testing enfocado en comportamiento y accesibilidad.             |
+| **User Interactions**     | **@testing-library/user-event** - Simulación realista de interacciones de usuario.          |
+| **Custom Matchers**       | **@testing-library/jest-dom** - Matchers semánticos para assertions del DOM.                |
+| **DOM Environment**       | **happy-dom** - Simulación ligera y rápida del DOM para Node.js.                            |
+| **Coverage** _(Opcional)_ | **@vitest/coverage-v8** - Reportes de cobertura de código.                                  |
+
+### Filosofía de Testing
+
+- **Testing de Composición:** Validar que los Compound Components funcionen correctamente y mantengan su API.
+- **Testing de Variantes CVA:** Verificar que las variantes de estilos se apliquen según la configuración.
+- **Testing de Accesibilidad:** Asegurar que los bloques cumplan estándares de accesibilidad (roles ARIA, keyboard navigation).
+- **Testing de Comportamiento:** Enfoque en cómo interactúa el usuario, no en detalles de implementación.
+
+---
+
 ## 🏗️ Arquitectura y Estructura Detallada
 
 La estructura se basa en el principio de **separación de responsabilidades**, distinguiendo los átomos, los bloques de composición y el entorno de previsualización.
@@ -45,13 +67,13 @@ La estructura se basa en el principio de **separación de responsabilidades**, d
 
 Cada bloque de composición debe ser autocontenido en su propia carpeta para una máxima modularidad:
 
-src/components/nczr/ 
-├── HeroSection/ 
-│ ├── HeroSection.tsx # Componente principal que el usuario importa 
-│ └── index.ts # Archivo de barril para una importación limpia 
-├── PricingTable/ 
-│ ├── PricingTable.tsx 
-│ ├── PricingTableItem.tsx # Un Compound Component hijo 
+src/components/nczr/
+├── HeroSection/
+│ ├── HeroSection.tsx # Componente principal que el usuario importa
+│ └── index.ts # Archivo de barril para una importación limpia
+├── PricingTable/
+│ ├── PricingTable.tsx
+│ ├── PricingTableItem.tsx # Un Compound Component hijo
 │ └── index.ts └── ...
 
 ---
