@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "nczr-ui",
+  "homepage": "http://localhost:5173",
+  "items": [
+    {
+      "name": "login",
+      "type": "registry:block",
+      "title": "Login",
+      "description": "A customizable login form with multiple variants (simple, card, elevated), social login support, and remember me functionality.",
+      "files": [
+        {
+          "path": "src/components/nczr-ui/login/login.tsx",
+          "type": "registry:component",
+          "target": "src/components/nczr/login.tsx"
+        },
+        {
+          "path": "src/components/nczr-ui/login/index.ts",
+          "type": "registry:lib",
+          "target": "src/components/nczr/login/index.ts"
+        }
+      ],
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["button", "card", "input", "label", "separator"]
+    }
+  ]
+}
